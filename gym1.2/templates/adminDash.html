@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="container" style=" background-color: #f9fcfc" >
+<div class="form-group">
+	<h1><small>Welcome</small ><span class="font-weight-bold" style=" text-transform: uppercase; font-size:50px; color: #0d5125"> {{session.username}}</span></h1>
+</div>
+</div>
+<div class="container jumbotron" style=" background-color: #ee8b64" >
+	<div class="form-group">
+		<div class="row fluid" >
+		<div class="span4 text-left">
+			<a href = "{{url_for('addTrainor')}}"><button type ="button" class="btn btn-outline-info btn-lg" style="background-color: black;" >Add Trainer&nbsp&nbsp&nbsp&nbsp</button></a>
+		</div>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<div class="span4 text-center">
+			<a href = "{{url_for('deleteTrainor')}}"><button type ="button" class="btn btn-outline-danger btn-lg" style="background-color: black;" >Delete Trainer&nbsp&nbsp&nbsp</button></a>
+		</div>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<div class="span4 text-right">
+			<a href = "{{url_for('viewTrainerDetails')}}"><button type ="button" class="btn btn-outline-secondary btn-lg" style="background-color: black;" >View all trainers&nbsp&nbsp&nbsp</button></a>
+		</div>
+	</div>
+	</div>
+	<div class="form-group">
+		<div class="row fluid" >
+		<div class="span4 text-left">
+			<a href = "{{url_for('addMember')}}"><button type ="button" class="btn btn-outline-info btn-lg"style="background-color: black;"  >Add Member&nbsp</button></a>
+		</div>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<div class="span4 text-center">
+			<a href = "{{url_for('deleteMember')}}"><button type ="button" class="btn btn-outline-danger btn-lg" style="background-color: black;" >Delete Member&nbsp</button></a>
+		</div>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<div class="span4 text-right">
+			<a href = "{{url_for('viewMemberDetails')}}"><button type ="button" class="btn btn-outline-secondary btn-lg" style="background-color: black;" >View all members</button></a>
+		</div>
+	</div>
+	</div>
+	<div class="form-group">
+		<div class="row fluid" >
+		<div class="span4 text-left">
+			<a href = "{{url_for('addSchedule')}}"><button type ="button" class="btn btn-outline-info btn-lg"style="background-color: black;"  >Add Schedule</button></a>
+		</div>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<div class="span4 text-center">
+			<a href = "{{url_for('deleteSchedule')}}"><button type ="button" class="btn btn-outline-danger btn-lg" style="background-color: black;" >Delete Schedule</button></a>
+		</div>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<div class="span4 text-right">
+			<a href = "{{url_for('viewScheduleDetails')}}"><button type ="button" class="btn btn-outline-secondary btn-lg" style="background-color: black;" >View Schedule&nbsp&nbsp&nbsp&nbsp&nbsp</button></a>
+		</div>
+	</div>
+	</div>
+	<div class="form-group">
+		<div class="row fluid" >
+		<div class="span4 text-left">
+			<a href = "{{url_for('addCentre')}}"><button type ="button" class="btn btn-outline-info btn-lg"style="background-color: black;"  >Add Centre&nbsp&nbsp&nbsp&nbsp</button></a>
+		</div>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<div class="span4 text-right">
+			<a href = "{{url_for('viewCentreDetails')}}"><button type ="button" class="btn btn-outline-secondary btn-lg"style="background-color: black;"  >View all centres&nbsp</button></a>
+		</div>
+	</div>
+	</div>
+</div>
+{% endblock %}

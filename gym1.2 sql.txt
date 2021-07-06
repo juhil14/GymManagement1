@@ -1,0 +1,39 @@
+create database gym1;
+
+use gym1;
+
+create table centre(centre_id int,name varchar(50),location varchar(50),contact_no varchar(10),primary key(centre_id));
+
+create table admin(admin_id int,username varchar(50) unique,password varchar(200),centre_id int,primary key(admin_id,centre_id),foreign key(centre_id)references centre(centre_id));
+
+create table trainer(trainer_id int,name varchar(50),centre_id int,primary key(trainer_id),foreign key(centre_id)references centre(centre_id));
+
+create table timeslots(batch_id int,time varchar(50),primary key(batch_id));
+
+create table workduring(batch_id int,trainer_id int,primary key(batch_id,trainer_id),foreign key(batch_id) references timeslots(batch_id),foreign key(trainer_id) references trainer(trainer_id));
+
+create table member(membership_no int,f_name varchar(50),l_name varchar(50),mobile_no varchar(10),start_date date,no_of_days int,username varchar(50) unique,password varchar(200),goals varchar(50),trainer_id int,batch_id int,centre_id int,primary key(membership_no),foreign key(trainer_id) references trainer(trainer_id),foreign key(batch_id) references timeslots(batch_id),foreign key(centre_id) references centre(centre_id));
+
+create table quality(membership_no int,rating int,description varchar(200),trainer_id int,primary key(membership_no),foreign key(trainer_id) references trainer(trainer_id));
+
+create table progress(membership_no int,date date,time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,weight int,height int,bmi int,primary key(membership_no,date),foreign key(membership_no) references member(membership_no));
+
+
+
+insert into centre(centre_id,name,location,contact_no) values(1,'atul','gujarat','3');
+insert into admin(admin_id,username,password,centre_id) values(10,'admin2','$5$rounds=535000$ajR8hAzSoSF.NhEs$MaLn1dbnXq9eu2W5Ge3c1ScAS9960yLBFv3aU9zaxc0',2);
+insert into trainer(trainer_id,name,centre_id) values(100,'juhil',1);
+insert into timeslots(batch_id,time) values(1000,'8-9');
+insert into member(membership_no,f_name,l_name,mobile_no,start_date,no_of_days,username,password,goals,trainer_id,batch_id,centre_id) values(10000,'ram','laxman','33','2019-11-12',25,'ram1','$5$rounds=535000$ajR8hAzSoSF.NhEs$MaLn1dbnXq9eu2W5Ge3c1ScAS9960yLBFv3aU9zaxc0','weight loss',100,1000,1);
+
+alter table trainer add column street varchar(200);
+
+alter table trainer add column mobile varchar(10);
+
+update table trainer set street='market' where centre_id=1;
+
+update trainer set mobile='333' where centre_id=1;
+
+alter table member add column date date;
+
+#99f2f5

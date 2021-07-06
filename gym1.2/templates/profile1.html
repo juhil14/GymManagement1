@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+	<div class="container jumbotron" style=" background-color: #becde5;">
+		<p style="font-size: 25px"><strong style="font-variant: small-caps; ">Admin Id</strong>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;{{result['admin_id']}}</p>
+		<br>
+		<p style="font-size: 25px"><strong style="font-variant: small-caps;">Username</strong>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;{{result['username']}}</p>
+		<br>
+		{% if result['prof']==1 %}
+		<p style="font-size: 25px"><strong style="font-variant: small-caps;">Profession</strong>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;Owner</p>
+		{% else %}
+			{% if result['prof']==2 %}
+			<p style="font-size: 25px"><strong style="font-variant: small-caps;">Profession</strong>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;Member</p>
+			
+			{% endif %}
+		{% endif %}
+		<br>
+		<p style="font-size: 25px"><strong style="font-variant: small-caps;">Centre Name</strong>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;{{result['centre_id']}}</p>
+		<br>
+	</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+	<div class="container jumbotron" style=" background-color: #becde5;">
+		<p style="font-size: 25px"><strong style="font-variant: small-caps; ">Membership No.</strong>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;{{result['membership_no']}}</p>
+		<br>
+		<p style="font-size: 25px"><strong style="font-variant: small-caps;">First Name</strong>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;{{result['f_name']}}</p>
+		<br>
+		<p style="font-size: 25px"><strong style="font-variant: small-caps;">Last Name</strong>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;{{result['l_name']}}</p>
+		<br>
+		<p style="font-size: 25px"><strong style="font-variant: small-caps;">Centre Id</strong>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;{{result['centre_id']}}</p>
+		<br>
+		<p style="font-size: 25px"><strong style="font-variant: small-caps;">Goals</strong>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;{{result['goals']}}</p>
+		<br>
+		<p style="font-size: 25px"><strong style="font-variant: small-caps;">Contact No.</strong>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;{{result['mobile_no']}}</p>
+		<br>
+		<p style="font-size: 25px"><strong style="font-variant: small-caps;">Username</strong>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;{{result['username']}}</p>
+		<br>
+		<p style="font-size: 25px"><strong style="font-variant: small-caps;">No of Days</strong>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;{{result['no_of_days']}}</p>
+		<br>
+		<p style="font-size: 25px"><strong style="font-variant: small-caps;">Start Date</strong>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;{{result['start_date']}}</p>
+		<br>
+		<p style="font-size: 25px"><strong style="font-variant: small-caps;">Trainer Name</strong>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;{{result['trainer_id']}}</p>
+		<br>
+		<p style="font-size: 25px"><strong style="font-variant: small-caps;">Batch Time</strong>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;{{result['batch_id']}}</p>
+		<br>
+	</div>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+	<div class="container" >
+		<div class="text-white">
+		<h1 style><small> {{user}}</small></h1>
+	</div>
+	<div class="container jumbotron" style="background-color: #bcf2cf">
+	<div class="form-group">
+		<a href = "{{url_for('attendance')}}"><button type ="button" class="btn btn-outline-info btn-lg" >Mark Attendance</button></a>
+	</div>
+	<div class="form-group">
+		<a href = "{{url_for('progress')}}"><button type ="button" class="btn btn-outline-info btn-lg" >Add Progress</button></a>
+	</div>
+</div>
+</form>	
+<div class="container" >
+	<table style="width:100%; font-size: 20px;" class="text-white table-hover table-bordered table-dark table-striped">
+	  <tr>
+		<th class="text-center " height="50"><strong>Date</strong></th>
+		<th class="text-center " height="50"><strong>Weight(kg)</strong></th> 
+		<th class="text-center " height="50"><strong>Height(cms)</strong></th> 
+		<th class="text-center " height="50"><strong>BMI</strong></th>
+		<th class="text-center " height="50"><strong>Weight Status</strong></th>
+	  </tr>
+	  {% for each in result %}
+			<tr>
+			<td class="text-center" height="50">{{each['date']}}</td>
+			<td class="text-center" height="50">{{each['weight']}}</td>
+			<td class="text-center" height="50">{{each['height']}}</td>
+			<td class="text-center" height="50">{{each['bmi']}}</td>
+			<td class="text-center" height="50">{{each['status']}}</td>
+	  </tr>
+	  {% endfor %}
+	</table>
+	</div>
+	
+	</div> 
+{% endblock %}

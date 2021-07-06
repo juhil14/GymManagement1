@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="container" >
+<table style="width:100%; font-size: 20px;" class="text-white table-hover table-bordered table-dark table-striped">
+  <tr>
+    <th class="text-center " height="50"><strong>Date</strong></th>
+    <th class="text-center " height="50"><strong>Weight</strong></th> 
+    <th class="text-center " height="50"><strong>Height</strong></th> 
+	<th class="text-center " height="50"><strong>BMI</strong></th>
+  </tr>
+  {% for each in result %}
+		<tr>
+		<td class="text-center" height="50">{{each['date']}}</td>
+		<td class="text-center" height="50">{{each['weight']}}</td>
+        <td class="text-center" height="50">{{each['height']}}</td>
+		<td class="text-center" height="50">{{each['bmi']}}</td>
+  </tr>
+  {% endfor %}
+</table>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+	<div class="container jumbotron" style=" background-color: #becde5;">
+		<p style="font-size: 25px"><strong style="font-variant: small-caps;">Centre Id</strong>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;{{result['centre_id']}}</p>
+		<br>
+		<p style="font-size: 25px"><strong style="font-variant: small-caps;">Name</strong>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;{{result['name']}}</p>
+		<br>
+		<p style="font-size: 25px"><strong style="font-variant: small-caps;">Contact No.</strong>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;{{result['contact_no']}}</p>
+		<br>
+		<p style="font-size: 25px"><strong style="font-variant: small-caps;">Location</strong>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;{{result['location']}}</p>
+		<br>
+	</div>
+{% endblock %}
